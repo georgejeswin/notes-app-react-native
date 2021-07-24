@@ -3,17 +3,20 @@ import { AsyncStorage, Dimensions, FlatList, StyleSheet, Text, TouchableOpacity,
 import {MaterialIcons} from '@expo/vector-icons'
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { useFocusEffect } from '@react-navigation/native';
 
 export default function HomeScreen({navigation}) {
 
   const [data,setData]=useState([])
 
-  useEffect(()=>{
-    fetchData();
-  },[])
+  useFocusEffect(
+    React.useCallback(() => {
+      fetchData();
+    }, [])
+  );
 
   const pressHandler=()=>{
-    navigation.navigate('Add')
+    navigation.navigate('Add');
   }
 
   const fetchData=async()=>{

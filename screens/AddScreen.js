@@ -47,7 +47,7 @@ const AddScreen = ({navigation}) => {
             Date.now().toString(),
             JSON.stringify(data)
         ).then(()=>{
-            navigation.goBack();
+            navigation.navigate('Home');
         })
         .catch(err=>console.log(err))
 
