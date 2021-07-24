@@ -73,7 +73,7 @@ const AddScreen = ({navigation}) => {
         onChangeText={(text) => setValues({ ...values, content: text })}
       />
       <TextInput
-        label="Due Date"
+        label="Date"
         style={styles.input}
         value={date.toString().slice(0, 15)}
         disabled
