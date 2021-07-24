@@ -9,7 +9,6 @@ import {
   View,
 } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
-import { useEffect } from "react";
 import { useState } from "react";
 import { useFocusEffect } from "@react-navigation/native";
 
@@ -23,7 +22,7 @@ export default function HomeScreen({ navigation }) {
   );
 
   const pressHandler = () => {
-    navigation.navigate("Add");
+    navigation.navigate("Add Note");
   };
 
   const fetchData = async () => {
